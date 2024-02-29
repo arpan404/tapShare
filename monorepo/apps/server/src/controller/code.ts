@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
-import schedule from "node-schedule";
+import { scheduleJob } from "node-schedule";
 import Code from "../database/schema/Code";
 
 const scheduleDeletion = (codeID: string) => {
-  schedule.scheduleJob(new Date(Date.now() + 86_400_000), async () => {
+  scheduleJob(new Date(Date.now() + 86_400_000), async () => {
     try {
       await Code.findByIdAndDelete(codeID);
     } catch (error) {
