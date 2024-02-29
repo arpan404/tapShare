@@ -1,0 +1,13 @@
+{
+  "extends": "@repo/typescript-config/server.json",
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "typescript-express-plugin"
+      }
+    ]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "build"],
+  "rootDir": "./src"
+}
