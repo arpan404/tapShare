@@ -133,3 +133,5 @@ const uploadFiles = async (req: Request, res: Response) => {
     }
   }
 };
+
+export { uploadFiles };
