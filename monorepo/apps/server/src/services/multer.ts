@@ -1,16 +1,6 @@
 import multer, { StorageEngine } from "multer";
 import { Request } from "express";
-
-interface MulterFile {
-  fieldname: string;
-  originalname: string;
-  encoding: string;
-  mimetype: string;
-  destination: string;
-  filename: string;
-  path: string;
-  size: number;
-}
+import { MulterFile } from "../types";
 
 const storage: StorageEngine = multer.diskStorage({
   destination: (
@@ -30,4 +20,4 @@ const storage: StorageEngine = multer.diskStorage({
   },
 });
 
-export { storage };
+export { multer, storage };

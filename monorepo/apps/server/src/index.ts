@@ -19,14 +19,6 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-app.get("/whoami", (_req: Request, res: Response) => {
-  res
-    .send(
-      "I am tapshare.I am a platform that enables users to transfer files, including zip files, to email and phone number in a tap.",
-    )
-    .status(200);
-});
-
 // Connect To Database
 mongoConnection();
 
@@ -41,6 +33,6 @@ app.use(express.static(path.join(__dirname, "/uploads")));
 //Handling All Routes in another file
 app.use("/", routeHandler);
 
-app.listen(config.PORT || 8000, () => {
+app.listen(config.PORT || 4000, () => {
   console.log(`Server is running on port ${config.PORT ? config.PORT : 8000}`);
 });
