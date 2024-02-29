@@ -24,7 +24,7 @@ app.use(cors(corsOptions));
 
 app.get("/whoami", (req, res) => {
   res.send(
-    "I am tapshare.I am a platform that enables users to transfer files, including zip files, to email and phone number in a tap."
+    "I am tapshare.I am a platform that enables users to transfer files, including zip files, to email and phone number in a tap.",
   );
 });
 

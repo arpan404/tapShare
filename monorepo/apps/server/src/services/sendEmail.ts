@@ -1,8 +1,8 @@
 import nodemailer from "nodemailer";
 import config from "../config";
-import { DELIVERY_OPTIONS } from "@repo/types";
+import { DELIVERY_OPTIONS } from "../types";
 
-const sendEmail = async (options) => {
+const sendEmail = async (options: DELIVERY_OPTIONS) => {
   try {
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",

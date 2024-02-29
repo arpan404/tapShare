@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import config from "../config";
+
 const mongoConnection = () => {
   try {
     mongoose.connect(config.MONGO_URI);

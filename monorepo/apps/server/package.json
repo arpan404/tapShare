@@ -4,7 +4,7 @@
   "main": "index.ts",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon index.ts",
+    "dev": "nodemon src/index.ts",
     "start": "node build/index.js"
   },
   "dependencies": {
@@ -18,5 +18,8 @@
     "nodemailer": "^6.9.1",
     "nodemon": "^3.0.1",
     "twilio": "^4.8.0"
+  },
+  "devDependencies": {
+    "@types/node-schedule": "^2.1.6"
   }
 }

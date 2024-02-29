@@ -5,7 +5,7 @@ const schema = new mongoose.Schema(
     text: {
       type: String,
     },
-    userId: {
+    userID: {
       type: String,
       required: true,
       index: true,
