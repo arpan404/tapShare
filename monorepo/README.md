@@ -1,7 +1,9 @@
 # TapShare
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 TapShare is not just a file-sharing platform; it's your go-to solution for seamless transfers of zip files, code snippets, and text with a simple tap. This README serves as your guide to unlocking the full potential of TapShare.
@@ -99,7 +101,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
-## Final
+## Summary
 
 TapShare is not just a file transfer tool; it's your hassle-free solution for sharing files and code. Try TapShare today and experience a new level of simplicity and security. Say goodbye to cumbersome file-sharing methods and hello to TapShare.
 
