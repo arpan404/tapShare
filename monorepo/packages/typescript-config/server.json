@@ -3,7 +3,6 @@
     "target": "ES2018",
     "module": "CommonJS",
     "moduleResolution": "node",
-    "outDir": "./build",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,

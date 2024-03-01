@@ -59,10 +59,15 @@ const getCodesByUserID = async (req: Request, res: Response) => {
   try {
     const code = await Code.find({ userID: req.params.id });
     if (code.length > 0) {
+      const toSendCOdes = code.map((obj) => ({
+        id: obj._id,
+        title: obj.title,
+        text: obj.text,
+      }));
       return res.json({
         status: 200,
         message: "Code found",
-        code: code,
+        code: toSendCOdes,
       });
     } else {
       return res.json({
