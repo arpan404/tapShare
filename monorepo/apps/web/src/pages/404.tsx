@@ -3,7 +3,7 @@ import { AiOutlineHome } from "react-icons/ai";
 import { MdOutlineArrowBack } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
-const AreYouLost = () => {
+export default function NotFound() {
   const navigate = useNavigate();
   return (
     <div className="flex min-h-[100vdh] w-full items-center justify-center">
@@ -54,6 +54,4 @@ const AreYouLost = () => {
       </div>
     </div>
   );
-};
-
-export default AreYouLost;
+}
