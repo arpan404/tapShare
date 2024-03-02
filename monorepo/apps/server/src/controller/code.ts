@@ -37,6 +37,7 @@ const createCode = async (req: Request, res: Response) => {
     });
 
     if (code) {
+      scheduleDeletion(String(code._id));
       return res.status(201).json({
         status: 200,
         message: "Code created successfully",
