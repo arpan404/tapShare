@@ -5,9 +5,9 @@ type ACTION = {
   }) => void;
   setProgress: (progress: number) => void;
   setLoading: (isLoading: boolean) => void;
-  setIsRecieverValid: (isValid: boolean) => void;
+  setIsReceiverValid: (isValid: boolean) => void;
   setReceiverEmail: (email: string) => void;
-  replaceReceiverEmial: (email: string) => void;
+  replaceReceiverEmail: (email: string) => void;
   setFiles: (files: Array<string>) => void;
   setIpAddress: (ip: string) => void;
 };
