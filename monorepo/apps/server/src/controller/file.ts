@@ -1,7 +1,6 @@
 import fs from "fs";
 import path from "path";
 import { scheduleJob } from "node-schedule";
-import sendSMS from "../services/sendSms";
 import sendEmail from "../services/sendEmail";
 import File from "../database/schema/File";
 import { Request, Response } from "express";
@@ -15,7 +14,7 @@ const scheduleFileDeletion = (fileID: string) => {
       if (file) {
         const filePath = path.join(
           "uploads",
-          file.path.replace(config.BASE_URL + "u/", ""),
+          file.path.replace(config.BASE_URL + "u/", "")
         );
         fs.unlink(filePath, (err) => {
           if (err) {
@@ -39,7 +38,7 @@ const emailOptions: DELIVERY_OPTIONS = {
 
 const saveFile = async (
   file: Express.Multer.File,
-  req: Request,
+  req: Request
 ): Promise<string | void> => {
   const newDoc = await File.create({
     userId: req.body.userId,
@@ -101,9 +100,8 @@ const uploadFiles = async (req: Request, res: Response) => {
           message: "Link generated",
         });
       }
-      const emails = sendToMailData.filter((data) => data.type === "email");
-      const phones = sendToMailData.filter((data) => data.type === "phone");
-      if (emails.length <= 0 && phones.length <= 0) {
+
+      if (sendToMailData.length <= 0) {
         return res.status(201).json({
           message: "Link generated",
         });
@@ -112,19 +110,10 @@ const uploadFiles = async (req: Request, res: Response) => {
       for (const filePath of filePaths) {
         emailOptions.text += `${filePath}\n`;
       }
-
-      emails.length > 0 &&
-        emails.forEach((email) => {
-          emailOptions.to = email.value;
-          sendEmail(emailOptions);
-        });
-
-      phones.length > 0 &&
-        phones.forEach((phone) => {
-          emailOptions.to = phone.value;
-          sendSMS(emailOptions);
-        });
-
+      sendToMailData.forEach((email) => {
+        emailOptions.to = email.value;
+        sendEmail(emailOptions);
+      });
       return res.status(200).json({
         message: "File sent successfully",
       });
