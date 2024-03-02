@@ -1,5 +1,8 @@
 type ACTION = {
-  setEmailData: (email: string) => void;
+  setEmailData: (email: {
+    email:string,
+    type:string
+  }) => void;
   setProgress: (progress: number) => void;
   setLoading: (isLoading: boolean) => void;
   setIsRecieverValid: (isValid: boolean) => void;
@@ -22,3 +25,4 @@ type STATE = {
   isReceiverValid: boolean;
   validEmailToAdd: boolean;
 };
+export { type ACTION, type STATE };
