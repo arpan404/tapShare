@@ -2,7 +2,7 @@ import React from "react";
 import { AiOutlineHome } from "react-icons/ai";
 import { MdOutlineArrowBack } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
-
+import { PiHandTapFill } from "react-icons/pi";
 export default function NotFound() {
   const navigate = useNavigate();
   return (
@@ -35,14 +35,14 @@ export default function NotFound() {
                   className="ease flex w-[161px] items-center justify-center gap-2 rounded-md border-2 border-blue-500 py-2 text-blue-500 transition-all duration-100 hover:bg-blue-500 hover:text-gray-50 active:bg-blue-400"
                   onClick={() => navigate(-1)}
                 >
-                  <MdOutlineArrowBack />
+                  <MdOutlineArrowBack  className="text-xl"/>
                   Back to Safety
                 </button>
                 <button
-                  className="ease flex  w-52 items-center justify-center gap-2 rounded-md bg-blue-500 py-2 text-gray-100 transition-all duration-100 hover:bg-blue-600 hover:text-gray-50 active:bg-blue-400"
+                  className="ease flex px-4 items-center justify-center gap-2 rounded-md bg-blue-500 py-2 text-gray-100 transition-all duration-100 hover:bg-blue-600 hover:text-gray-50 active:bg-blue-400"
                   onClick={() => navigate("/")}
                 >
-                  <AiOutlineHome /> Let's Keep Tapping 👏
+                  <AiOutlineHome className="text-xl"/> Let's Keep Tapping <PiHandTapFill className="text-xl"/>
                 </button>
               </div>
             </div>

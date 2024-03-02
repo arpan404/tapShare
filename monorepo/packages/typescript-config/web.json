@@ -1,6 +1,9 @@
 {
   "extends": "./base.json",
   "compilerOptions": {
+    "types": [
+      "vite-plugin-pwa/react"
+    ],
     "plugins": [{ "name": "next" }],
     "module": "ESNext",
     "moduleResolution": "Bundler",
