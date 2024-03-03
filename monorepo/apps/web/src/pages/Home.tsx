@@ -4,6 +4,9 @@ import DeleteUserID from "../components/buttons/DeleteUserId";
 import Toaster from "../components/animated/Toaster";
 import AppBar from "../components/misc/AppBar";
 import ShareTextButtonHome from "../components/buttons/ShareTextButtonHome";
+import SocialMedia from "../components/misc/SocialMedia";
+import AnimateStyle from "../components/animated/AnimateStyle";
+import FilesInput from "../components/input/FilesInput";
 
 export default function Home() {
   const files = useStore((state) => state.files);
@@ -24,7 +27,7 @@ export default function Home() {
       setFiles(fileArray);
     }
   };
- 
+
   return (
     <>
       <div
@@ -36,8 +39,11 @@ export default function Home() {
         <DeleteUserID />
         <Toaster data={toasterData} handleClose={closeToaster} />
         <AppBar />
-        {files.length ===0 && <ShareTextButtonHome/>}
+        {files.length === 0 && <ShareTextButtonHome />}
+        <AnimateStyle files={files} />
+        <FilesInput/>
       </div>
+      <SocialMedia />
     </>
   );
 }

@@ -1,5 +1,5 @@
 {
-  "name": "tapShare",
+  "name": "tapshare",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mui/icons-material": "^5.15.11",
     "@tanstack/react-query": "^5.24.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
