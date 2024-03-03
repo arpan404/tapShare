@@ -11,7 +11,6 @@ export const useStore = create<ACTION & STATE>((set) => ({
   validEmailToAdd: false,
   ipAddress: null,
   setLoading: (isLoading: boolean) => set({ loading: isLoading }),
-  setValidEmailToAdd: (isValid: boolean) => set({ validEmailToAdd: isValid }),
   setFiles: (files) => set({ files }),
   setIpAddress: (ip) => set({ ipAddress: ip }),
   setIsReceiverValid: (isValid) => set({ isReceiverValid: isValid }),
