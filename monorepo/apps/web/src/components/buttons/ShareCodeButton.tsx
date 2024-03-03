@@ -1,5 +1,5 @@
-import { useStore } from "../../utility/store";
-import UploadingAnimation from "../animated/uploadingAnimation";
+import { useStore } from "../../store";
+import UploadingAnimation from "../animated/UploadingAnimation";
 export default function ShareCodeButton() {
   const loading = useStore((state) => state.loading);
   return (
