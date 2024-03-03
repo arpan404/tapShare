@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { baseUrl } from "../config";
+import { baseUrl } from "../../../../../tapShareFrontend/src/config";
 import { useNavigate, useParams } from "react-router-dom";
 import FetchingScreen from "../components/animated/FetchingScreen";
 import NotFoundScreen from "../components/misc/NotFoundScreen";

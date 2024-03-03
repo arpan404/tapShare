@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import FetchingScreen from "../components/animated/FetchingScreen";
 import NotFoundScreen from "../components/misc/NotFoundScreen";
-import { baseUrl } from "../config";
+import { baseUrl } from "../../../../../tapShareFrontend/src/config";
 
 export default function SeeShared() {
   const [files, setFiles] = useState([]);

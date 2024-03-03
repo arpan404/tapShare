@@ -1,6 +1,6 @@
 import axios from "axios";
 import { create } from "zustand";
-import { baseUrl } from "../../config";
+import { baseUrl } from "../../../../../../tapShareFrontend/src/config";
 
 export const useHistoryStore = create((set) => ({
   history: {

@@ -4,11 +4,17 @@ import { AiOutlineFilePdf } from "react-icons/ai";
 import { AiOutlineFileUnknown } from "react-icons/ai";
 import { BsFiletypePpt } from "react-icons/bs";
 import { AiOutlineFileExcel } from "react-icons/ai";
-const FileTypeIcon = ({ fileType }) => {
+const FileTypeIcon = ({ fileType }:{fileType:string}) => {
+    const iconClassName = "text-[2.5rem]"
+    if(fileType === "application/pdf"){
+        return <AiOutlineFilePdf className={iconClassName} />
+    }
+    if(fileType.startsWith("image")){
+        return <img className="w-full object-cover" src={TapshareLogoGif} />
+    }
   return (
     <>
       {(fileType === "application/pdf" && (
-        <AiOutlineFilePdf className="text-[2.5rem] " />
       )) ||
         (fileType.startsWith("image") && (
           <img

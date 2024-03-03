@@ -1,24 +1,21 @@
 import React from "react";
-import { useStore } from "../../utility/store";
-import UploadingAnimation from "../animated/uploadingAnimation";
+import { useStore } from "../../store";
+import UploadingAnimation from "../animated/UploadingAnimation";
 import { useNavigate } from "react-router-dom";
 
-export default function UploadFiles({ setToasterData }) {
+export default function UploadFiles() {
   // store calls
   const navigate = useNavigate();
-  const send_file = useStore((state) => state.send_file);
   const files = useStore((state) => state.files);
   const loading = useStore((state) => state.loading);
   const setReceiverEmail = useStore((state) => state.setReceiverEmail);
   const setFiles = useStore((state) => state.setFiles);
-  const emailData = useStore((state) => state.emailData);
-  const setEmailData = useStore((state) => state.setEmailData);
-  const validEmailToAdd = useStore((state) => state.validEmailToAdd);
   const receiverEmail = useStore((state) => state.receiverEmail);
-
+  const isReceiverValid = useStore((state) => state.isReceiverValid);
+  const setToasterData = useStore((state) => state.setToasterData);
   // handles email adding to the array
   const handleEmailAddClick = (data) => {
-    if (data?.value && !validEmailToAdd) {
+    if (data?.value && !isReceiverValid) {
       setToasterData({
         open: true,
         message: "One of the email is invalid",
@@ -28,7 +25,7 @@ export default function UploadFiles({ setToasterData }) {
     }
     if (
       Array.isArray(receiverEmail) &&
-      receiverEmail.some((email) => email.value === data.value)
+      receiverEmail.some((email) => email === data)
     ) {
       setToasterData({
         open: true,

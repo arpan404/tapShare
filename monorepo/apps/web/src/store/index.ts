@@ -10,6 +10,9 @@ export const useStore = create<ACTION & STATE>((set) => ({
   isReceiverValid: false,
   validEmailToAdd: false,
   ipAddress: null,
+  currentReceiverEmail: "",
+  toasterData: { open: false, message: "", severity: undefined },
+
   setLoading: (isLoading: boolean) => set({ loading: isLoading }),
   setFiles: (files) => set({ files }),
   setIpAddress: (ip) => set({ ipAddress: ip }),
@@ -20,4 +23,6 @@ export const useStore = create<ACTION & STATE>((set) => ({
       receiverEmail: [...state.receiverEmail, email],
     })),
   setShowFireButton: (toShow) => set({ showFireButton: toShow }),
+  setToasterData: (data) => set({ toasterData: data }),
+  setCurrentReceiverEmail: (email) => set({ currentReceiverEmail: email }),
 }));

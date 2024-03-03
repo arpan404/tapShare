@@ -28,34 +28,7 @@ const AppBar = () => {
         </a>
         {Array.isArray(files) && files?.length <= 0 && <SearchCode />}
         <div className="absolute top-0 right-0 m-[1rem] flex flex-col justify-center items-center gap-2">
-          {/* <a
-            href="https://github.com/maheshbasnet089/tapShare"
-            className="text-[#efefef] text-sm hover:underline relative"
-            style={{
-              textDecoration: "none",
-              display: "inline-block",
-              width: "24px",
-              height: "24px",
-              borderRadius: "50%",
-              border: "2px solid #efefef",
-              textAlign: "center",
-              lineHeight: "24px",
-            }}
-            target="_blank"
-            title="About"
-          >
-            <span
-              style={{
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)", // Center the content horizontally and vertically
-              }}
-            >
-              &#63; 
-            </span>
-          </a> */}
-          <HistoryIcon />
+               <HistoryIcon />
         </div>
       </div>
     </nav>

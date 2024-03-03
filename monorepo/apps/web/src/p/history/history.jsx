@@ -1,9 +1,9 @@
-import HistoryAppBar from "../history/components/app-bar";
+import HistoryAppBar from "./components/app-bar";
 import { useHistoryStore } from "./store";
 import { useQuery } from "@tanstack/react-query";
 import { MdOutlineContentCopy } from "react-icons/md";
 import DynamicIcon from "../../components/DynamicFileTypeIcon";
-import { FormatDateTime } from "../../utility/FormatDateTime";
+import { FormatDateTime } from "../../../../../../tapShareFrontend/src/utility/FormatDateTime";
 import HistorySkeleton from "./HistorySkeleton";
 import { useEffect, useState } from "react";
 import { FaEye } from "react-icons/fa";
@@ -13,7 +13,7 @@ import Stack from "@mui/material/Stack";
 import { Chip } from "@mui/material";
 import { PiFileCode, PiFileSvg, PiFiles } from "react-icons/pi";
 import { BiFileFind } from "react-icons/bi";
-import { formatFileSize } from "../../utility/FormatFileSize";
+import { formatFileSize } from "../../../../../../tapShareFrontend/src/utility/FormatFileSize";
 
 const History = () => {
   const navigate = useNavigate();

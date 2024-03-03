@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { baseUrl } from "../config";
+import { baseUrl } from "../../../../../tapShareFrontend/src/config";
 import { useNavigate } from "react-router-dom";
-import { useStore } from "../utility/store";
-import storeUser from "../utility/storeUser";
+import { useStore } from "../../../../../tapShareFrontend/src/utility/store";
+import storeUser from "../../../../../tapShareFrontend/src/utility/storeUser";
 import CodeTitleField from "../components/inputFields/CodeTitleField";
 import CancelButton from "../components/buttons/CancelButton";
 import CodeTextField from "../components/inputFields/CodeTextField";

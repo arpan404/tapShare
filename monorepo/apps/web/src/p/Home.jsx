@@ -1,8 +1,8 @@
 import { useState } from "react";
 import AppBar from "../components/misc/appBar";
 import Toaster from "../components/animated/toaster";
-import { useStore } from "../utility/store";
-import DeleteUserId from "../components/buttons/deleteUserId";
+import { useStore } from "../../../../../tapShareFrontend/src/utility/store";
+import DeleteUserId from "../components/buttons/DeleteUserId";
 import ShareTextButtonHome from "../components/buttons/shareTextButtonHome";
 import AnimateStyle from "../components/animated/animateStyle";
 import HomePageFilesOptions from "../components/misc/homePageFilesOptions";
@@ -12,8 +12,7 @@ import SpeedDial from "@mui/material/SpeedDial";
 import SpeedDialIcon from "@mui/material/SpeedDialIcon";
 import SpeedDialAction from "@mui/material/SpeedDialAction";
 import EditIcon from "@mui/icons-material/Edit";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { FaFacebook } from "react-icons/fa";
+
 function Home() {
   const files = useStore((state) => state.files);
   const setFiles = useStore((state) => state.setFiles);
