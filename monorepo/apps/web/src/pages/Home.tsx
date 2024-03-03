@@ -7,6 +7,7 @@ import ShareTextButtonHome from "../components/buttons/ShareTextButtonHome";
 import SocialMedia from "../components/misc/SocialMedia";
 import AnimateStyle from "../components/animated/AnimateStyle";
 import FilesInput from "../components/input/FilesInput";
+import HomePageFilesOptions from "../components/misc/HomePageFilesOptions";
 
 export default function Home() {
   const files = useStore((state) => state.files);
@@ -41,7 +42,8 @@ export default function Home() {
         <AppBar />
         {files.length === 0 && <ShareTextButtonHome />}
         <AnimateStyle files={files} />
-        <FilesInput/>
+        <FilesInput />
+        {files.length > 0 && <HomePageFilesOptions />}
       </div>
       <SocialMedia />
     </>

@@ -9,7 +9,7 @@ export default function ViewSelectedFiles() {
   const progress = useStore((state) => state.progress);
   const progressBarWidth = loading && progress ? `${progress}%` : "0%";
 
-  const handleRemoveFile = async (fileName: string) => {
+  const handleRemoveFile = (fileName: string) => {
     setFiles(files.filter((file) => file.name !== fileName));
   };
 
